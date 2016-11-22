@@ -1,0 +1,39 @@
+//
+//  PrefixHeader.pch
+//  tianqiyubao
+//
+//  Created by hekai on 16/4/16.
+//  Copyright © 2016年 hekai. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define SCREEN_WIDTH    ([[UIScreen mainScreen] bounds].size.width)
+
+#define SCREEN_HEIGHT   ([[UIScreen mainScreen] bounds].size.height)
+
+#define RELAY_x(view)     view.frame.size.width + view.frame.origin.x
+#define RELAY_y(view)     view.frame.size.height + view.frame.origin.y
+
+#define RGB(x,y,z,m)      [UIColor colorWithRed:x/255.0 green:y/255.0 blue:z/255.0 alpha:m];
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define iPhone6p ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1080, 1920), [[UIScreen mainScreen] currentMode].size) : NO)
+
+
+#define  KEY_USERNAME_PASSWORD @"com.lihe.weather.usernamepassword"
+#define  KEY_USERNAME @"com.lihe.weather.username"
+#define  KEY_PASSWORD @"com.lihe.weather.password"
+
+
+//k780
+#define Appkey 19350
+#define K780Sign @"fe881b302e95f60596d7517d32699a26"
+//umappkey
+#define UmAppkey @"57386dc2e0f55a2199000c90"
+
+#endif /* PrefixHeader_pch */
